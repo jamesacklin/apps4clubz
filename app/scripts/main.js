@@ -24,11 +24,10 @@ $(document).ready(function(){
 $(window).scroll(function () {
   //stick nav to top of page
   var y = $(this).scrollTop();
-  var navWrap = $('main').offset().top;
-  navWrap = navWrap - 10;
+  var navWrap = $('header').offset().top;
   if (y > navWrap) {
-    $('nav').addClass('show');
+    $('nav').addClass('sticky');
   } else {
-    $('nav').removeClass('show');
+    $('nav').removeClass('sticky');
   }
 });

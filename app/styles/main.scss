@@ -82,20 +82,25 @@ nav {
   color: $white;
   background: $brand-primary;
   @media (min-width: $screen-lg) {
+    display: block;
     font-size: 75%;
-    position: fixed;
+    position: relative;
     z-index: 100;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     padding: 0 5%;
-    transition: opacity 0.2s ease;
-    opacity: 0;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .button {
+        margin-left: 2em;
+      }
+    }
   }
-
-  &.show {
-    opacity: 1;
+  &.sticky {
+    position: fixed;
   }
 }
 
@@ -182,25 +187,51 @@ p {
 
 header[role=banner] {
   .headline {
-    padding: 10vh 10%;
+    display: flex;
+    align-items: center;
     background: url('../images/background.jpg') 50% 50% no-repeat $brand-primary;
     background-size: cover;
-    @media (min-width: $screen-lg) {
-      padding: 10vh 10% 10vh 50%;
+    box-shadow: 0 0 0.4em $gray-light;
+    aside {
+      width: 50%;
+      text-align: center;
+      img {
+        display: block;
+        margin: 1em auto 0;
+      }
+    }
+    .content {
+      width: 50%;
+      padding: 2.5vh 10%;
+      @media (min-width: $screen-lg) {
+        padding: 1em 1.5em;
+      }
+    }
+    .banner-logo {
+      width: 12em;
+      margin-bottom: 2em;
     }
   }
-
-  .content {
-    padding: 2.5vh 10%;
-    @media (min-width: $screen-lg) {
-      padding: 10vh 10% 20vh 50%;
+  .teaser-content {
+    margin: 0 auto;
+    max-width: 80em;
+    display: flex;
+    align-items: center;
+    aside {
+      width: 50%;
+      text-align: center;
+      padding: 5vw 0;
     }
-
-    p.lede {
-      font-size: 1.125em;
-      @media (min-width: $screen-md) {
-        font-size: 1.25em;
+    .content {
+      padding: 2.5vh 10%;
+      @media (min-width: $screen-lg) {
+        width: 50%;
+        padding: 1em 1.5em;
       }
+    }
+    img {
+      width: 80%;
+      max-width: 25em;
     }
   }
 }
@@ -237,6 +268,9 @@ header[role=banner] {
       width: 50%;
       padding: 3em 0;
       text-align: center;
+      img {
+        max-height: 80vh;
+      }
     }
   }
 }
