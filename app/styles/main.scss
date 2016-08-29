@@ -103,6 +103,10 @@ p {
   font-weight: 300;
   margin: 0;
   padding: 1em 0;
+  strong {
+    font-weight: 400;
+    color: $brand-primary;
+  }
 }
 
 .hidden-screen-sm {
@@ -166,6 +170,12 @@ p {
       color: darken($brand-primary, 10%);
       border-color: $gray-lighter;
       background: $gray-lighter;
+    }
+  }
+  &.button-block-screen-sm {
+    @media (max-width: $screen-md) {
+      display: block;
+      margin-bottom: 1em;
     }
   }
 }
