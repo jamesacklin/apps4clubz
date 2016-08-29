@@ -4,7 +4,12 @@ WebFont.load({
   }
 });
 
-new WOW().init();
+
+var wow = new WOW({
+  mobile: false
+});
+
+wow.init();
 
 $(document).ready(function(){
   $('.tour-button').click(function(e){
