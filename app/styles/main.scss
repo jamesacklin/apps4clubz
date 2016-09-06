@@ -192,6 +192,7 @@ header[role=banner] {
     background: url('../images/background.jpg') 50% 50% no-repeat $brand-primary;
     background-size: cover;
     box-shadow: 0 0 0.4em $gray-light;
+    color: $white;
     aside {
       width: 50%;
       text-align: center;
@@ -201,9 +202,15 @@ header[role=banner] {
       }
     }
     .content {
-      width: 50%;
+      p {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.24);
+        font-weight: 700;
+        max-width: 20em;
+        font-size: 1.2em;
+      }
       padding: 2.5vh 10%;
       @media (min-width: $screen-lg) {
+        width: 50%;
         padding: 1em 1.5em;
       }
     }

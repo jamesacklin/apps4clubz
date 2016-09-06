@@ -1,6 +1,6 @@
 WebFont.load({
   google: {
-    families: ['Roboto Slab:100,300,400', 'Roboto']
+    families: ['Roboto Slab:100,300,400,700', 'Roboto']
   }
 });
 
