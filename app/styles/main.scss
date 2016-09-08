@@ -285,8 +285,56 @@ header[role=banner] {
   }
 }
 
+
+.form-section {
+  display: flex;
+  background: $gray-lighter;
+  flex-direction: column;
+  @media (min-width: $screen-lg){
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 3vw 10%;
+  }
+  .content {
+    width: 100%;
+    padding: 0 10%;
+    @media (min-width: $screen-lg) {
+      width: 50%;
+      max-width: 30em;
+      padding: 1em 1.5em;
+    }
+  }
+  h2 { color: $brand-primary; }
+}
+
+.form-row {
+  margin: 1em 0;
+}
+
+.control-label {
+  display: block;
+  margin-bottom: 0.4em;
+  font-family: $font-family-sans-serif;
+}
+
+.form-control {
+  font-family: $font-family-sans-serif;
+  width: 100%;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 0.5em;
+  -webkit-appearance: none;
+  outline: 0;
+  border: 1px solid $gray-dark;
+  &:focus {
+    border-color: $brand-primary;
+  }
+}
+
 footer {
   font-size: 12px;
   padding: 0 5%;
   text-align: center;
+  background: darken($brand-primary, 20%);
+  color: $white;
 }
