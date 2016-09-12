@@ -152,22 +152,30 @@
         <p>Schedule a free demo with us to see if Apps4Clubz is right for your club or organization. Please provide your name, email address, the name of your club, where you're located, and your phone number (optional). A sales representative will be in touch to discuss. Thanks!</p>
       </div>
       <div class="content">
-        <form action="submit">
+        <form id="contact-form">
           <div class="form-row">
             <label class="control-label" for="contact-name">Your Name</label>
-            <input class="form-control" id="contact-name" type="text">
+            <input class="form-control" name="name" id="contact-name" type="text" required>
           </div>
           <div class="form-row">
             <label class="control-label" for="contact-email">Your Email Address</label>
-            <input class="form-control" id="contact-email" type="email">
+            <input class="form-control" name="email" id="contact-email" type="email" required>
           </div>
           <div class="form-row">
             <label class="control-label" for="contact-phone">Your Phone Number (Optional)</label>
-            <input class="form-control" id="contact-phone" type="tel">
+            <input class="form-control" name="phone" id="contact-phone" type="tel" optional>
           </div>
           <div class="form-row">
-            <label class="control-label" for="club-name">Club Name & Location</label>
-            <input class="form-control" id="club-name" type="text">
+            <label class="control-label" for="club-name">Club Name</label>
+            <input class="form-control" name="clubname" id="club-name" type="text" required>
+          </div>
+          <div class="form-row">
+            <label class="control-label" for="club-state">State</label>
+            <input class="form-control" name="state" id="club-state" type="text" required>
+          </div>
+          <div class="form-row">
+            <label class="control-label" for="club-zip">ZIP Code</label>
+            <input class="form-control" name="zip" id="club-zip" type="text" required pattern="(\d{5}([\-]\d{4})?)">
           </div>
           <div class="form-row">
             <button type="submit" class="button button-block-screen-sm">Submit Form</button>

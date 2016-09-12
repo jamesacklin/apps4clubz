@@ -291,7 +291,7 @@ header[role=banner] {
   display: flex;
   background: $gray-lighter;
   flex-direction: column;
-  @media (min-width: $screen-lg){
+  @media (min-width: $screen-lg) {
     justify-content: space-around;
     flex-direction: row;
     padding: 3vw 10%;
@@ -305,7 +305,9 @@ header[role=banner] {
       padding: 1em 1.5em;
     }
   }
-  h2 { color: $brand-primary; }
+  h2 {
+    color: $brand-primary;
+  }
 }
 
 .form-row {

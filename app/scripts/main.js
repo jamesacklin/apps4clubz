@@ -4,15 +4,14 @@ WebFont.load({
   }
 });
 
-
 var wow = new WOW({
   mobile: false
 });
 
 wow.init();
 
-$(document).ready(function(){
-  $('.tour-button').click(function(e){
+$(document).ready(function() {
+  $('.tour-button').click(function(e) {
     e.preventDefault();
     var target = this.getAttribute('href');
     $('html, body').animate({
@@ -21,7 +20,7 @@ $(document).ready(function(){
   });
 });
 
-$(window).scroll(function () {
+$(window).scroll(function() {
   //stick nav to top of page
   var y = $(this).scrollTop();
   var navWrap = $('header').offset().top;
@@ -30,4 +29,28 @@ $(window).scroll(function () {
   } else {
     $('nav').removeClass('sticky');
   }
+});
+
+$.fn.serializeObject = function() {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name]) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+$(function() {
+    $('#contact-form').on('submit', function(e) {
+      e.preventDefault();
+      var formData = $(this).serializeObject();
+      console.log(formData);
+    });
 });
