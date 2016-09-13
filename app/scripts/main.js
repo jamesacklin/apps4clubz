@@ -64,7 +64,7 @@ $(function() {
         // Sneakily log errors, delete this for production
         console.log(data.errors);
       } else {
-        $('.button-submit').prop("disabled", true).html('<i class="fa fa-fw fa-check"></i> Thanks for getting in touch!');
+        $('.button-submit').prop('disabled', true).html('<i class="fa fa-fw fa-check"></i> Thanks for getting in touch!');
       }
     });
   });
