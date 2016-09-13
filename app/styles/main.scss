@@ -311,17 +311,27 @@ header[role=banner] {
 }
 
 .form-row {
-  margin: 1em 0;
+  margin: 0 0 1.5em;
 }
 
 .control-label {
   display: block;
-  margin-bottom: 0.4em;
+  margin: 0.25em 0;
   font-family: $font-family-sans-serif;
+  .form-row-disabled & {
+    color: $gray-light;
+  }
+}
+
+.help-text {
+  font-size: 0.8em;
+  margin: 0.25em 0 0.5em;
+  padding: 0;
 }
 
 .form-control {
   font-family: $font-family-sans-serif;
+  background: $white;
   width: 100%;
   font-size: 16px;
   height: 40px;
@@ -331,6 +341,11 @@ header[role=banner] {
   border: 1px solid $gray-dark;
   &:focus {
     border-color: $brand-primary;
+  }
+  &:disabled {
+    color: $gray-light;
+    background: $gray-lightest;
+    border-color: $gray-light;
   }
 }
 
