@@ -49,6 +49,7 @@ $(function() {
   $('#contact-form').on('submit', function(e) {
     e.preventDefault();
     var formData = $(this).serializeObject();
+    $('#contact-form input').prop('disabled', true).parent('.form-row').addClass('form-row-disabled');
     $('.button-submit').html('<i class="fa fa-fw fa-spin fa-spinner"></i> Please wait...');
     $.ajax({
       type: 'POST',
@@ -58,12 +59,12 @@ $(function() {
       encode: true
     }).done(function(data) {
       if (data.errors) {
+        $('#contact-form input').prop('disabled', false).parent('.form-row').removeClass('form-row-disabled');
         $('.button-submit').html('<i class="fa fa-fw fa-exclamation-circle"></i> Please try submitting again.');
         // Sneakily log errors, delete this for production
         console.log(data.errors);
       } else {
-        $('#contact-form input').prop('disabled', true).parent('.form-row').addClass('form-row-disabled');
-        $('.button-submit').html('<i class="fa fa-fw fa-check"></i> Thanks for getting in touch!');
+        $('.button-submit').prop("disabled", true).html('<i class="fa fa-fw fa-check"></i> Thanks for getting in touch!');
       }
     });
   });
