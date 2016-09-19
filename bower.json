@@ -7,7 +7,8 @@
     "webfontloader": "^1.6.26",
     "normalize-scss": "^3.0.3",
     "wow": "wow.js#^1.1.2",
-    "lightbox2": "^2.8.2"
+    "lightbox2": "^2.8.2",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

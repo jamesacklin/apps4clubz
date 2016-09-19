@@ -12,6 +12,18 @@ var wow = new WOW({
 });
 wow.init();
 $(document).ready(function() {
+  $('.slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    swipe: false,
+    arrows: false,
+    fade: true,
+    draggable: false,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000
+  });
   $('.tour-button').click(function(e) {
     e.preventDefault();
     var target = this.getAttribute('href');

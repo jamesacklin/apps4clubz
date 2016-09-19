@@ -191,10 +191,14 @@ header[role=banner] {
   .headline {
     display: flex;
     align-items: center;
-    background: url('../images/background.jpg') 50% 50% no-repeat $brand-primary;
-    background-size: cover;
+    overflow: hidden;
     box-shadow: 0 0 0.4em $gray-light;
     color: $white;
+    position: relative;
+    @media (max-width: $screen-lg){
+      background: url(../images/background-1.jpg) 50% 50% no-repeat $brand-primary;
+      background-size: cover;
+    }
     aside {
       width: 50%;
       text-align: center;
@@ -219,6 +223,20 @@ header[role=banner] {
     .banner-logo {
       width: 12em;
       margin-bottom: 2em;
+    }
+    .slider {
+      @media (min-width: $screen-lg){
+        display: block;
+      }
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: $brand-primary;
+      img {
+        mix-blend-mode: multiply;
+      }
     }
   }
   .teaser-content {
