@@ -356,4 +356,12 @@ footer {
   text-align: center;
   background: darken($brand-primary, 20%);
   color: $white;
+  a { color: $white; }
+}
+
+#privacy-content {
+  background: $white;
+  padding: 0 10vw;
+  h2 { font-size: 1.5em; line-height: 1.2; text-align: center;}
+  strong { font-weight: bold; }
 }
